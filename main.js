@@ -24,8 +24,9 @@ As you have entered you see three subjects in the first room of the cave:
 -
 1: axe,
 2: lamp,
-3: key
-Meanwhile a big stone is closed the entrance, so you need to go forward.`);
+3: key,
+4: leave the cave
+`);
 let answerok=0;
 while (answerok==0){
 let answer = prompt('Which one do you prefer?');
@@ -38,6 +39,10 @@ if (answer==1) {
  else if (answer==3) {
     inventory.push("key");
     answerok=1}
+ else if (answer==4){
+    console.log("You are not brave enough!!!!");
+    process.exit();
+ }
  else {
     console.log("bad answer");
     }
@@ -74,7 +79,7 @@ while (answerok==0){
                     // bear killed, go withot key
                     console.log(`You have entered in a dark room. As you do not
                     have a lamp and were not careful enough, you have fallen 
-                    in a deep hole. Sorry, you are died!!!!`)
+                    in a deep hole. Sorry, you ARE DIED!!!!`)
                     answerok=1;
                 }
                 else{
@@ -99,7 +104,7 @@ while (answerok==0){
                 //run away, have no keys
                 console.log(`As you do not have a key, you cannot open the next door, need to run backwards.
                 On your way back you have met with a witch.
-                The witch asks you if you likes witches.
+                The witch asks you if you like witches.
                 You can choose:
                 1:yes
                 2:no`);
@@ -110,14 +115,14 @@ while (answerok==0){
                         //you like the witch.
                         console.log(`The witch likes your answer, you have LUCK.
                         With her magic, the witch brings you out of the cave. 
-                        Congratulation, you have finally a good day.`);
+                        Congratulation, you have finally a GOOD DAY today.`);
                         answerok=1;
                     }
                     else if(answer==2){
                         //you do not like the witch.
                         answerok=1;
-                        console.log(`The witch does not likes your answer and transform you to a
-                        mouse. You have unfortunately a BAD DAY today. `)
+                        console.log(`The witch does not likes your answer and transforms you to a
+                        mouse. You have unfortunately a BAD DAY today.`)
                     }
                 }
             }
